@@ -116,8 +116,8 @@ tailwind.config = {
 <!-- ░░ HERO — ein Bildschirm, full-bleed ░░ -->
 <section id="top" class="relative isolate overflow-hidden bg-navy-950">
   <!-- Vollflächiges Bild -->
-  <img src="img/hero-main.jpg" alt="Moderne Multimarken-Werkstatt mit Reifenlager — Garage & Pneuhaus SPEED"
-       class="absolute inset-0 h-full w-full object-cover object-center" loading="eager" />
+  <img src="img/hero-main.jpg" alt="Fahrzeug auf der Hebebühne, Mechaniker bei der Arbeit — Garage & Pneuhaus SPEED"
+       class="absolute inset-0 h-full w-full object-cover object-[68%_center]" loading="eager" />
   <!-- Scrim für Lesbarkeit: links dunkel, rechts Bild sichtbar -->
   <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/82 to-navy-950/20"></div>
   <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/10 to-navy-950/55"></div>
@@ -173,6 +173,33 @@ tailwind.config = {
       <svg class="h-9 w-9 text-speed-bright shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a2 2 0 1 0 2.8 2.8l6-6a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.2-.4-.4-2.2 2.4-2.4Z"/></svg>
       <div><p class="font-display font-700 text-white">Kompetenz für alle Marken</p><p class="text-white/65 text-sm">Eine Werkstatt für Ihr ganzes Fahrzeugleben.</p></div>
     </div>
+  </div>
+</section>
+
+<!-- ░░ UNSER BETRIEB — echtes Standortfoto vom alten Auftritt ░░ -->
+<section class="bg-paper pt-16 sm:pt-24">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="reveal flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8">
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <span class="speed-rule w-12 rounded-full"></span>
+          <span class="kicker text-[12px] uppercase text-speed-dark font-700">Unser Betrieb</span>
+        </div>
+        <h2 class="font-display font-900 text-navy-900 text-2xl sm:text-4xl leading-tight">
+          Mitten im Furttal — Garage, Pneuhaus &amp; Occasionen.
+        </h2>
+      </div>
+      <p class="text-navy-900/60 lg:text-right lg:max-w-xs">
+        Sie finden uns direkt gegenüber der AMAG in der Industrie Buchs/Dällikon.
+      </p>
+    </div>
+    <figure class="reveal relative overflow-hidden rounded-2xl ring-1 ring-navy-900/10 shadow-xl">
+      <img src="img/facade.jpg" alt="Garage & Pneuhaus SPEED in Buchs ZH — Werkstattgebäude mit Occasionen und Reifenservice"
+           class="w-full object-cover" loading="lazy" />
+      <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy-950/85 via-navy-950/30 to-transparent px-5 sm:px-7 pt-12 pb-5 text-white font-display font-700 text-sm sm:text-base">
+        Garage &amp; Pneuhaus SPEED · Dällikerstrasse 39, 8107 Buchs ZH
+      </figcaption>
+    </figure>
   </div>
 </section>
 
