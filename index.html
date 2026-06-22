@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Garage &amp; Pneuhaus SPEED — Ihre Multimarken-Garage im Furttal | Buchs ZH</title>
+<meta name="description" content="Garage & Pneuhaus SPEED in Buchs ZH: unabhängige Multimarken-Garage im Furttal. Service, Reparaturen, Reifen, Klima, Autoglas, Carrosserie, Occasionen und Ersatzwagen — ehrlich und transparent. CarXpert-Partner seit 2013." />
+<meta name="theme-color" content="#0a1a33" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['Archivo', 'system-ui', 'sans-serif'],
+        body: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        navy: {
+          950: '#061021', 900: '#0a1a33', 800: '#0d2347',
+          700: '#10306a', 600: '#16407f',
+        },
+        speed: { DEFAULT: '#3ca824', bright: '#4cc22e', dark: '#2f8a1c' },
+        paper: '#f4f7fb',
+      },
+    },
+  },
+};
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'IBM Plex Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  h1,h2,h3,h4,.font-display { font-family: 'Archivo', system-ui, sans-serif; }
+  h1,h2,h3 { overflow-wrap: break-word; }
+  .grid > * { min-width: 0; }
+  /* тонкая «скоростная» штриховка-акцент */
+  .speed-rule { height: 4px; background: linear-gradient(90deg, #3ca824 0%, #4cc22e 60%, transparent 100%); }
+  .kicker { letter-spacing: .22em; }
+  .lift { transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease, border-color .35s ease; }
+  .lift:hover { transform: translateY(-6px); }
+  .reveal { transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+  .js-anim .reveal { opacity: 0; transform: translateY(22px); }
+  .js-anim .reveal.in { opacity: 1; transform: none; }
+  .navlink { position: relative; }
+  .navlink::after { content:''; position:absolute; left:0; bottom:-4px; height:2px; width:0; background:#4cc22e; transition:width .3s ease; }
+  .navlink:hover::after { width:100%; }
+  /* verify-режим: фикс высоты героя, чтобы снять всю страницу одним кадром */
+  html.verify { scroll-behavior: auto; }
+  html.verify #hero-inner { min-height: 720px !important; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity:1; transform:none; transition:none; }
+    .lift { transition:none; }
+  }
+</style>
+</head>
+<body class="bg-paper text-navy-900 font-body antialiased">
+<script>
+  var q=location.search;
+  if(!/[?&]noanim/.test(q) && !/[?&]verify/.test(q)){document.documentElement.classList.add('js-anim');}
+  if(/[?&]verify/.test(q)){document.documentElement.classList.add('verify');}
+</script>
+
+<!-- ░░ HEADER ░░ -->
+<header class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur supports-[backdrop-filter]:bg-navy-900/80 border-b border-white/10">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="flex items-center gap-3 shrink-0" aria-label="Garage & Pneuhaus SPEED Startseite">
+      <span class="grid place-items-center h-11 w-11 rounded-md bg-speed text-navy-950 font-display font-900 text-2xl leading-none italic shadow-lg shadow-speed/30">S</span>
+      <span class="leading-tight">
+        <span class="block font-display font-700 text-white text-[13px] tracking-wide uppercase">Garage &amp; Pneuhaus</span>
+        <span class="block font-display font-900 italic text-speed-bright text-xl leading-none -mt-0.5 tracking-wide">SPEED</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] text-white/85 font-500">
+      <a href="#leistungen" class="navlink hover:text-white">Leistungen</a>
+      <a href="#ueber" class="navlink hover:text-white">Über uns</a>
+      <a href="#marken" class="navlink hover:text-white">Marken</a>
+      <a href="#occasionen" class="navlink hover:text-white">Occasionen</a>
+      <a href="#kontakt" class="navlink hover:text-white">Kontakt</a>
+    </nav>
+    <div class="flex items-center gap-3 shrink-0">
+      <a href="tel:+41434118646" class="hidden sm:flex flex-col items-end leading-tight group">
+        <span class="text-[11px] uppercase tracking-wider text-speed-bright font-600">Direkt anrufen</span>
+        <span class="font-display font-700 text-white text-[15px] group-hover:text-speed-bright transition">043 411 86 46</span>
+      </a>
+      <a href="#kontakt" class="hidden sm:inline-flex items-center gap-2 rounded-md bg-speed hover:bg-speed-bright text-navy-950 font-display font-700 text-sm px-4 py-2.5 transition shadow-lg shadow-speed/20">
+        Termin
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button id="menu-btn" type="button" aria-label="Menü öffnen" aria-expanded="false" class="lg:hidden grid place-items-center h-11 w-11 rounded-md border border-white/15 text-white">
+        <svg id="menu-ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile-Menü -->
+  <div id="menu-panel" class="lg:hidden hidden border-t border-white/10 bg-navy-900">
+    <nav class="mx-auto max-w-7xl px-5 py-4 flex flex-col">
+      <a href="#leistungen" class="py-3 text-white/85 font-500 border-b border-white/5">Leistungen</a>
+      <a href="#ueber" class="py-3 text-white/85 font-500 border-b border-white/5">Über uns</a>
+      <a href="#marken" class="py-3 text-white/85 font-500 border-b border-white/5">Marken</a>
+      <a href="#occasionen" class="py-3 text-white/85 font-500 border-b border-white/5">Occasionen</a>
+      <a href="#kontakt" class="py-3 text-white/85 font-500 border-b border-white/5">Kontakt</a>
+      <a href="tel:+41434118646" class="mt-4 inline-flex items-center justify-center gap-2 rounded-md bg-white/5 border border-white/15 text-white font-display font-700 px-4 py-3">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        043 411 86 46
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- ░░ HERO — ein Bildschirm ░░ -->
+<section id="top" class="relative isolate overflow-hidden bg-navy-950">
+  <img src="img/hero-bg.jpg" alt="Moderne Autowerkstatt mit Fahrzeug auf der Hebebühne"
+       class="absolute inset-0 h-full w-full object-cover object-center opacity-70" loading="eager" />
+  <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/85 to-navy-950/30"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/40"></div>
+
+  <div id="hero-inner" class="relative mx-auto max-w-7xl px-5 sm:px-8 min-h-[calc(100svh-5rem)] flex flex-col justify-center py-12">
+    <div class="max-w-2xl">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="speed-rule w-14 rounded-full"></span>
+        <span class="kicker text-[12px] sm:text-[13px] uppercase text-speed-bright font-600">Multimarken-Garage · Furttal · Buchs ZH</span>
+      </div>
+      <h1 class="font-display font-900 text-white text-[2.6rem] leading-[1.02] sm:text-6xl lg:text-[4.4rem]">
+        Ihre unabhängige<br />
+        <span class="text-speed-bright italic">Multimarken</span>-Garage<br />
+        im Furttal.
+      </h1>
+      <p class="mt-6 text-white/80 text-lg leading-relaxed max-w-xl">
+        Dank modernster Diagnosegeräte und fundiertem Fachwissen warten und
+        reparieren wir Fahrzeuge sämtlicher Marken und Alters — effizient,
+        kostengünstig, ehrlich und transparent.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center gap-4">
+        <a href="#kontakt" class="inline-flex items-center gap-2 rounded-md bg-speed hover:bg-speed-bright text-navy-950 font-display font-800 px-7 py-4 text-base transition shadow-xl shadow-speed/30">
+          Termin vereinbaren
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#leistungen" class="inline-flex items-center gap-2 rounded-md border border-white/25 hover:border-speed-bright text-white font-display font-700 px-7 py-4 text-base transition hover:bg-white/5">
+          Alle Leistungen
+        </a>
+      </div>
+      <div class="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-white/70">
+        <span class="inline-flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-speed-bright"></span> CarXpert-Partner seit 2013</span>
+        <span class="inline-flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-speed-bright"></span> Originalteile mit Garantie</span>
+        <span class="inline-flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-speed-bright"></span> Kompetenz für alle Marken</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ TRUST-STRIP ░░ -->
+<section class="bg-navy-700">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+    <div class="flex items-center gap-4 py-6 sm:py-7 sm:pr-8">
+      <svg class="h-9 w-9 text-speed-bright shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+      <div><p class="font-display font-700 text-white">Alle Teile in Originalqualität</p><p class="text-white/65 text-sm">Geprüfte Markenteile, kein Kompromiss.</p></div>
+    </div>
+    <div class="flex items-center gap-4 py-6 sm:py-7 sm:px-8">
+      <svg class="h-9 w-9 text-speed-bright shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg>
+      <div><p class="font-display font-700 text-white">Mit Garantie</p><p class="text-white/65 text-sm">Sauber dokumentiert, von Anfang an.</p></div>
+    </div>
+    <div class="flex items-center gap-4 py-6 sm:py-7 sm:pl-8">
+      <svg class="h-9 w-9 text-speed-bright shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a2 2 0 1 0 2.8 2.8l6-6a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.2-.4-.4-2.2 2.4-2.4Z"/></svg>
+      <div><p class="font-display font-700 text-white">Kompetenz für alle Marken</p><p class="text-white/65 text-sm">Eine Werkstatt für Ihr ganzes Fahrzeugleben.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ LEISTUNGEN ░░ -->
+<section id="leistungen" class="bg-paper py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="max-w-3xl reveal">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="speed-rule w-12 rounded-full"></span>
+        <span class="kicker text-[12px] uppercase text-speed-dark font-700">Unsere Leistungen</span>
+      </div>
+      <h2 class="font-display font-900 text-navy-900 text-3xl sm:text-5xl leading-tight">
+        Alles für Ihr Fahrzeug —<br class="hidden sm:block" /> aus einer Hand.
+      </h2>
+      <p class="mt-5 text-navy-900/70 text-lg max-w-2xl">
+        Von der Wartung über die Carrosserie bis zum Pneuhaus: bei uns ist die
+        Beratung direkt und persönlich. Sie bestimmen, welche Arbeiten ausgeführt werden.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- 1 -->
+      <article class="lift group reveal relative rounded-2xl bg-white border border-navy-900/10 p-7 hover:border-speed/50 hover:shadow-xl hover:shadow-navy-900/5">
+        <span class="absolute right-6 top-6 font-display font-800 text-navy-900/[.06] text-4xl group-hover:text-speed/15 transition">01</span>
+        <svg class="h-10 w-10 text-speed-dark mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a2 2 0 1 0 2.8 2.8l6-6a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.2-.4-.4-2.2 2.4-2.4Z"/></svg>
+        <h3 class="font-display font-800 text-navy-900 text-xl">Service &amp; Wartung</h3>
+        <p class="mt-2 text-navy-900/65 leading-relaxed">Service, Wartung und Reparatur aller Marken — inklusive Abgastest und MFK-Vorführung.</p>
+      </article>
+      <!-- 2 -->
+      <article class="lift group reveal relative rounded-2xl bg-white border border-navy-900/10 p-7 hover:border-speed/50 hover:shadow-xl hover:shadow-navy-900/5">
+        <span class="absolute right-6 top-6 font-display font-800 text-navy-900/[.06] text-4xl group-hover:text-speed/15 transition">02</span>
+        <svg class="h-10 w-10 text-speed-dark mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.7 9.7 0 0 1 6.7 2.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.7 9.7 0 0 1-6.7-2.7L3 16"/><path d="M8 16H3v5"/></svg>
+        <h3 class="font-display font-800 text-navy-900 text-xl">Reparaturen</h3>
+        <p class="mt-2 text-navy-900/65 leading-relaxed">Fachmännische Reparaturen an Fahrzeugen sämtlicher Marken und jeden Alters — effizient und kostengünstig.</p>
+      </article>
+      <!-- 3 -->
+      <article class="lift group reveal relative rounded-2xl bg-white border border-navy-900/10 p-7 hover:border-speed/50 hover:shadow-xl hover:shadow-navy-900/5">
+        <span class="absolute right-6 top-6 font-display font-800 text-navy-900/[.06] text-4xl group-hover:text-speed/15 transition">03</span>
+        <svg class="h-10 w-10 text-speed-dark mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3.8M12 17.2V21M3 12h3.8M17.2 12H21"/></svg>
+        <h3 class="font-display font-800 text-navy-900 text-xl">Reifen &amp; Pneuhaus</h3>
+        <p class="mt-2 text-navy-900/65 leading-relaxed">Verkauf und Montage von Reifen aller Marken bis 28 Zoll, Felgen, Reifenwechsel und Auswuchten.</p>
+      </article>
+      <!-- 4 -->
+      <article class="lift group reveal relative rounded-2xl bg-white border border-navy-900/10 p-7 hover:border-speed/50 hover:shadow-xl hover:shadow-navy-900/5">
+        <span class="absolute right-6 top-6 font-display font-800 text-navy-900/[.06] text-4xl group-hover:text-speed/15 transition">04</span>
+        <svg class="h-10 w-10 text-speed-dark mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3.5 8 6H5a2 2 0 0 0-2 2v3l2 1v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5l2-1V8a2 2 0 0 0-2-2h-3l-1.5-2.5a2 2 0 0 0-1.7-1h-2.4a2 2 0 0 0-1.7 1Z"/><path d="M8 18h8"/></svg>
+        <h3 class="font-display font-800 text-navy-900 text-xl">Klima-Service</h3>
+        <p class="mt-2 text-navy-900/65 leading-relaxed">Klimaservice, Autoelektronik, Motorelektronik und Lenkgeometrie — präzise eingestellt.</p>
+      </article>
+      <!-- 5 -->
+      <article class="lift group reveal relative rounded-2xl bg-white border border-navy-900/10 p-7 hover:border-speed/50 hover:shadow-xl hover:shadow-navy-900/5">
+        <span class="absolute right-6 top-6 font-display font-800 text-navy-900/[.06] text-4xl group-hover:text-speed/15 transition">05</span>
+        <svg class="h-10 w-10 text-speed-dark mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l2.4-4.2A2 2 0 0 1 7.1 3.8h9.8a2 2 0 0 1 1.7 1L21 9"/><path d="M3 9h18v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2H8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M7 13h2M15 13h2"/></svg>
+        <h3 class="font-display font-800 text-navy-900 text-xl">Autoglas</h3>
+        <p class="mt-2 text-navy-900/65 leading-relaxed">Steinschlag-Reparatur und Scheibenersatz — schnell, sauber und unkompliziert.</p>
+      </article>
+      <!-- 6 -->
+      <article class="lift group reveal relative rounded-2xl bg-white border border-navy-900/10 p-7 hover:border-speed/50 hover:shadow-xl hover:shadow-navy-900/5">
+        <span class="absolute right-6 top-6 font-display font-800 text-navy-900/[.06] text-4xl group-hover:text-speed/15 transition">06</span>
+        <svg class="h-10 w-10 text-speed-dark mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m15.5 4.5 4 4L9 19l-5 1 1-5Z"/><path d="m13 7 4 4"/></svg>
+        <h3 class="font-display font-800 text-navy-900 text-xl">Carrosserie</h3>
+        <p class="mt-2 text-navy-900/65 leading-relaxed">Ausbeulen, Lackieren und Polieren — damit Ihr Fahrzeug wieder wie neu aussieht.</p>
+      </article>
+      <!-- 7 -->
+      <article class="lift group reveal relative rounded-2xl bg-white border border-navy-900/10 p-7 hover:border-speed/50 hover:shadow-xl hover:shadow-navy-900/5">
+        <span class="absolute right-6 top-6 font-display font-800 text-navy-900/[.06] text-4xl group-hover:text-speed/15 transition">07</span>
+        <svg class="h-10 w-10 text-speed-dark mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-9 12h7l-2 8 9-12h-7Z"/></svg>
+        <h3 class="font-display font-800 text-navy-900 text-xl">Tuning &amp; Fahrwerk</h3>
+        <p class="mt-2 text-navy-900/65 leading-relaxed">Fahrzeug-Tuning, Sportfahrwerke, Felgen, Radio/CD und Navigationssysteme.</p>
+      </article>
+      <!-- 8 -->
+      <article class="lift group reveal relative rounded-2xl bg-white border border-navy-900/10 p-7 hover:border-speed/50 hover:shadow-xl hover:shadow-navy-900/5">
+        <span class="absolute right-6 top-6 font-display font-800 text-navy-900/[.06] text-4xl group-hover:text-speed/15 transition">08</span>
+        <svg class="h-10 w-10 text-speed-dark mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h2l1-2h8l1 2h2"/><path d="M6 15l1.5-5A2 2 0 0 1 9.4 8.5h5.2a2 2 0 0 1 1.9 1.5L18 15"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/></svg>
+        <h3 class="font-display font-800 text-navy-900 text-xl">Occasionen</h3>
+        <p class="mt-2 text-navy-900/65 leading-relaxed">Beratung, Verkauf und Ankauf von Gebrauchtwagen aller Marken — zu fairen Preisen.</p>
+      </article>
+      <!-- 9 -->
+      <article class="lift group reveal relative rounded-2xl bg-navy-900 border border-navy-900 p-7 text-white overflow-hidden">
+        <span class="absolute right-6 top-6 font-display font-800 text-white/10 text-4xl">09</span>
+        <span class="absolute -right-8 -bottom-8 h-28 w-28 rounded-full bg-speed/20 blur-2xl"></span>
+        <svg class="h-10 w-10 text-speed-bright mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2v-5l-2-4H8L6 12H3v5h2"/><path d="M3 12h16"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="16.5" cy="17.5" r="1.8"/><path d="M12 3v5"/></svg>
+        <h3 class="font-display font-800 text-white text-xl">Ersatzwagen</h3>
+        <p class="mt-2 text-white/70 leading-relaxed">Auf Wunsch stellen wir Ihnen während der Arbeiten einen Ersatzwagen zur Verfügung.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ ÜBER UNS / WILLKOMMEN ░░ -->
+<section id="ueber" class="bg-navy-900 text-white py-20 sm:py-28 overflow-hidden">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="lg:col-span-6 reveal">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="speed-rule w-12 rounded-full"></span>
+        <span class="kicker text-[12px] uppercase text-speed-bright font-700">Willkommen bei SPEED</span>
+      </div>
+      <h2 class="font-display font-900 text-3xl sm:text-5xl leading-tight">
+        Garage &amp; Pneuhaus <span class="text-speed-bright italic">SPEED</span><br />Buchs ZH
+      </h2>
+      <p class="mt-6 text-white/80 text-lg leading-relaxed">
+        Ihre unabhängige Multimarken-Garage im Furttal. Dank modernster
+        Diagnosegeräte und einem fundierten Fachwissen sind wir in der Lage,
+        Fahrzeuge sämtlicher Marken und Alters effizient und kostengünstig zu
+        warten und zu reparieren.
+      </p>
+      <p class="mt-4 text-white/80 text-lg leading-relaxed">
+        Bei uns ist die Beratung direkt und persönlich. Wir offerieren ehrlich
+        und transparent — <span class="text-white font-600">Sie bestimmen, welche Arbeiten ausgeführt werden sollen.</span>
+      </p>
+      <div class="mt-9 grid grid-cols-3 gap-4">
+        <div class="rounded-xl bg-white/5 border border-white/10 p-5 text-center">
+          <p class="font-display font-900 text-speed-bright text-3xl">2013</p>
+          <p class="text-white/60 text-sm mt-1 leading-snug">CarXpert-Partner</p>
+        </div>
+        <div class="rounded-xl bg-white/5 border border-white/10 p-5 text-center">
+          <p class="font-display font-900 text-speed-bright text-3xl">Alle</p>
+          <p class="text-white/60 text-sm mt-1 leading-snug">Marken &amp; Modelle</p>
+        </div>
+        <div class="rounded-xl bg-white/5 border border-white/10 p-5 text-center">
+          <p class="font-display font-900 text-speed-bright text-3xl">28″</p>
+          <p class="text-white/60 text-sm mt-1 leading-snug">Reifen bis Zoll</p>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-6 reveal">
+      <div class="relative">
+        <span class="absolute -inset-3 rounded-3xl bg-gradient-to-br from-speed/30 to-transparent blur-xl"></span>
+        <div class="relative grid grid-cols-5 gap-4">
+          <figure class="col-span-3 rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
+            <img src="img/facade.jpg" alt="Garage & Pneuhaus SPEED — Werkstattgebäude in Buchs ZH" class="w-full h-56 sm:h-72 object-cover" loading="lazy" />
+          </figure>
+          <figure class="col-span-2 rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
+            <img src="img/pylon.jpg" alt="Pylon Garage & Pneuhaus SPEED, CarXpert-Partner" class="w-full h-56 sm:h-72 object-cover object-top" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ MARKEN ░░ -->
+<section id="marken" class="bg-paper py-16 sm:py-20">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 text-center reveal">
+    <span class="kicker text-[12px] uppercase text-speed-dark font-700">Kompetenz für alle Marken</span>
+    <h2 class="mt-3 font-display font-800 text-navy-900 text-2xl sm:text-4xl">Wir betreuen Ihr Fahrzeug — egal welche Marke.</h2>
+    <div class="mt-10 flex flex-wrap justify-center gap-3 sm:gap-4">
+      <span class="rounded-full border border-navy-900/15 bg-white px-5 py-2.5 font-display font-700 text-navy-900/80">VW</span>
+      <span class="rounded-full border border-navy-900/15 bg-white px-5 py-2.5 font-display font-700 text-navy-900/80">Audi</span>
+      <span class="rounded-full border border-navy-900/15 bg-white px-5 py-2.5 font-display font-700 text-navy-900/80">Seat</span>
+      <span class="rounded-full border border-navy-900/15 bg-white px-5 py-2.5 font-display font-700 text-navy-900/80">Škoda</span>
+      <span class="rounded-full border border-navy-900/15 bg-white px-5 py-2.5 font-display font-700 text-navy-900/80">BMW</span>
+      <span class="rounded-full border border-navy-900/15 bg-white px-5 py-2.5 font-display font-700 text-navy-900/80">Mercedes</span>
+      <span class="rounded-full border border-navy-900/15 bg-white px-5 py-2.5 font-display font-700 text-navy-900/80">Smart</span>
+      <span class="rounded-full border border-navy-900/15 bg-white px-5 py-2.5 font-display font-700 text-navy-900/80">Opel</span>
+      <span class="rounded-full border border-navy-900/15 bg-white px-5 py-2.5 font-display font-700 text-navy-900/80">Citroën</span>
+      <span class="rounded-full border border-navy-900/15 bg-white px-5 py-2.5 font-display font-700 text-navy-900/80">Peugeot</span>
+      <span class="rounded-full border border-navy-900/15 bg-white px-5 py-2.5 font-display font-700 text-navy-900/80">Fiat</span>
+      <span class="rounded-full border border-navy-900/15 bg-white px-5 py-2.5 font-display font-700 text-navy-900/80">Ford</span>
+      <span class="rounded-full border border-navy-900/15 bg-white px-5 py-2.5 font-display font-700 text-navy-900/80">Toyota</span>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ OCCASIONEN / CTA-BAND ░░ -->
+<section id="occasionen" class="relative bg-navy-700 overflow-hidden">
+  <span class="absolute -left-10 -top-10 h-48 w-48 rounded-full bg-speed/20 blur-3xl"></span>
+  <span class="absolute right-0 bottom-0 h-40 w-72 bg-gradient-to-l from-speed/10 to-transparent"></span>
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 py-16 sm:py-20 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+    <div class="max-w-2xl reveal">
+      <span class="kicker text-[12px] uppercase text-speed-bright font-700">Occasionen &amp; Beratung</span>
+      <h2 class="mt-3 font-display font-900 text-white text-3xl sm:text-4xl leading-tight">
+        Gebrauchtwagen aller Marken — zu fairen Preisen.
+      </h2>
+      <p class="mt-4 text-white/80 text-lg leading-relaxed">
+        Bei der Wahl einer Auto-Occasion stehen wir Ihnen beratend zur Seite und
+        kaufen Ihr Fahrzeug auf Wunsch auch an. Persönlich, ehrlich und auf Augenhöhe.
+      </p>
+    </div>
+    <a href="#kontakt" class="shrink-0 inline-flex items-center gap-2 rounded-md bg-speed hover:bg-speed-bright text-navy-950 font-display font-800 px-8 py-4 text-base transition shadow-xl shadow-speed/30 reveal">
+      Beratung anfragen
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ░░ KONTAKT / ÖFFNUNGSZEITEN ░░ -->
+<section id="kontakt" class="bg-paper py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-12 gap-10 lg:gap-12">
+    <div class="lg:col-span-5 reveal">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="speed-rule w-12 rounded-full"></span>
+        <span class="kicker text-[12px] uppercase text-speed-dark font-700">Kontakt &amp; Anfahrt</span>
+      </div>
+      <h2 class="font-display font-900 text-navy-900 text-3xl sm:text-4xl leading-tight">Wir sind für Sie da.</h2>
+
+      <dl class="mt-8 space-y-5">
+        <div class="flex items-start gap-4">
+          <span class="grid place-items-center h-11 w-11 rounded-lg bg-navy-900 text-speed-bright shrink-0"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><dt class="text-sm uppercase tracking-wide text-navy-900/50 font-600">Adresse</dt>
+          <dd class="font-display font-700 text-navy-900 text-lg leading-snug">Garage &amp; Pneuhaus SPEED<br />Dällikerstrasse 39, 8107 Buchs ZH</dd></div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="grid place-items-center h-11 w-11 rounded-lg bg-navy-900 text-speed-bright shrink-0"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+          <div><dt class="text-sm uppercase tracking-wide text-navy-900/50 font-600">Telefon &amp; Fax</dt>
+          <dd class="font-display font-700 text-navy-900 text-lg leading-snug"><a href="tel:+41434118646" class="hover:text-speed-dark transition">043 411 86 46</a><br /><span class="text-navy-900/55 text-base font-500">Fax 043 411 86 47</span></dd></div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="grid place-items-center h-11 w-11 rounded-lg bg-navy-900 text-speed-bright shrink-0"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <div><dt class="text-sm uppercase tracking-wide text-navy-900/50 font-600">E-Mail &amp; Facebook</dt>
+          <dd class="font-display font-700 text-navy-900 text-lg leading-snug"><a href="mailto:info@garage-speed.ch" class="hover:text-speed-dark transition">info@garage-speed.ch</a><br /><a href="https://facebook.com/garage.pneuhaus.speed" target="_blank" rel="noopener" class="text-navy-900/55 text-base font-500 hover:text-speed-dark transition">facebook.com/garage.pneuhaus.speed</a></dd></div>
+        </div>
+      </dl>
+
+      <div class="mt-8 rounded-2xl bg-white border border-navy-900/10 p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <svg class="h-5 w-5 text-speed-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <p class="font-display font-800 text-navy-900">Öffnungszeiten</p>
+        </div>
+        <table class="w-full text-navy-900/80">
+          <tbody class="divide-y divide-navy-900/10">
+            <tr><td class="py-2.5 font-600">Mo – Do</td><td class="py-2.5 text-right tabular-nums">7:30–12:00 · 13:15–18:00</td></tr>
+            <tr><td class="py-2.5 font-600">Fr</td><td class="py-2.5 text-right tabular-nums">7:30–12:00 · 13:15–17:00</td></tr>
+            <tr><td class="py-2.5 font-600">Sa</td><td class="py-2.5 text-right text-navy-900/60">nach Vereinbarung</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7 reveal">
+      <div class="h-full min-h-[420px] rounded-2xl overflow-hidden ring-1 ring-navy-900/10 shadow-xl">
+        <iframe
+          title="Standort Garage & Pneuhaus SPEED, Dällikerstrasse 39, 8107 Buchs ZH"
+          src="https://maps.google.com/maps?q=D%C3%A4llikerstrasse%2039%2C%208107%20Buchs%20ZH&z=15&output=embed"
+          class="w-full h-full min-h-[420px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="bg-navy-950 text-white/60 border-t border-white/10">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 py-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="lg:col-span-2">
+      <div class="flex items-center gap-3">
+        <span class="grid place-items-center h-10 w-10 rounded-md bg-speed text-navy-950 font-display font-900 text-xl italic">S</span>
+        <span class="leading-tight">
+          <span class="block font-display font-700 text-white text-xs tracking-wide uppercase">Garage &amp; Pneuhaus</span>
+          <span class="block font-display font-900 italic text-speed-bright text-lg leading-none">SPEED</span>
+        </span>
+      </div>
+      <p class="mt-4 max-w-md text-sm leading-relaxed">
+        Ihre unabhängige Multimarken-Garage im Furttal. Service, Reparaturen,
+        Reifen, Klima, Autoglas, Carrosserie, Occasionen und Ersatzwagen —
+        ehrlich und transparent, aus einer Hand.
+      </p>
+    </div>
+    <div>
+      <p class="font-display font-700 text-white text-sm uppercase tracking-wide mb-4">Leistungen</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#leistungen" class="hover:text-speed-bright transition">Service &amp; Reparaturen</a></li>
+        <li><a href="#leistungen" class="hover:text-speed-bright transition">Reifen &amp; Pneuhaus</a></li>
+        <li><a href="#leistungen" class="hover:text-speed-bright transition">Klima &amp; Autoglas</a></li>
+        <li><a href="#leistungen" class="hover:text-speed-bright transition">Carrosserie &amp; Tuning</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-display font-700 text-white text-sm uppercase tracking-wide mb-4">Kontakt</p>
+      <ul class="space-y-2 text-sm">
+        <li>Dällikerstrasse 39</li>
+        <li>8107 Buchs ZH</li>
+        <li><a href="tel:+41434118646" class="hover:text-speed-bright transition">043 411 86 46</a></li>
+        <li><a href="mailto:info@garage-speed.ch" class="hover:text-speed-bright transition">info@garage-speed.ch</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+      <p>© 2026 Garage &amp; Pneuhaus SPEED, Buchs ZH · CarXpert-Partner seit 2013</p>
+      <p class="text-white/40">Multimarken-Garage · Furttal · Zürich</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // тихий reveal по скроллу
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = (Math.min(i % 3, 2) * 80) + 'ms';
+    io.observe(el);
+  });
+
+  // Mobile-Menü
+  const mb = document.getElementById('menu-btn');
+  const mp = document.getElementById('menu-panel');
+  const mi = document.getElementById('menu-ico');
+  const closeMenu = () => { mp.classList.add('hidden'); mb.setAttribute('aria-expanded','false'); mi.innerHTML='<path d="M4 7h16M4 12h16M4 17h16"/>'; };
+  if (mb) {
+    mb.addEventListener('click', () => {
+      const open = mp.classList.toggle('hidden') === false;
+      mb.setAttribute('aria-expanded', String(open));
+      mi.innerHTML = open ? '<path d="M6 6l12 12M18 6 6 18"/>' : '<path d="M4 7h16M4 12h16M4 17h16"/>';
+    });
+    mp.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));
+  }
+</script>
+</body>
+</html>
